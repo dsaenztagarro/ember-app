@@ -3,3 +3,11 @@
   <li>{{#link-to 'search'}}search{{/link-to}}</li>
   <li>{{#link-to 'upload'}}upload{{/link-to}}</li>
 </ul>
+
+<ul>
+  {{#each model as |photo|}}
+    <li><a {{action 'select' photo}}>{{photo.url}}</a></li>
+  {{/each}}
+</ul>
+
+{{outlet}}

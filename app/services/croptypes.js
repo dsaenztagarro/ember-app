@@ -3,9 +3,13 @@ import Ember from 'ember';
 export default Ember.Service.extend({
   getPhotosSelected: function() {
 		return [{
-			url: '/tmp/image1.jpg'
+			name: 'gallery:5x3',
+			width: 5,
+			height: 3
 		}, {
-			url: '/tmp/image2.jpg'
+			name: 'gallery:3x5',
+			width: 3,
+			height: 5
 		}];
   }
 });
