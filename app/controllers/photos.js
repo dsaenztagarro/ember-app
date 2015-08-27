@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
   actions: {
     select(photo) {
       console.log(photo);
+      this.transitionToRoute('photos.properties');
     }
   }
 });
