@@ -6,6 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+    this.route('photos', function() {
+        this.route('properties');
+        this.route('crops');
+    });
+    this.route('search');
+    this.route('upload');
 });
 
 export default Router;
