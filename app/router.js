@@ -10,6 +10,10 @@ Router.map(function() {
         this.route('properties');
         this.route('crops');
     });
+		this.route('photo', { path: '/photo/:photo_id' }, function() {
+        this.route('properties');
+        this.route('crops');
+		});
     this.route('search');
     this.route('upload');
 });
