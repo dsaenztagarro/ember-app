@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('service:croptypes', 'Unit | Service | croptypes', {
+moduleFor('service:upload', 'Unit | Service | upload', {
   // Specify the other units that are required for this test.
   // needs: ['service:foo']
 });
