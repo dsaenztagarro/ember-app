@@ -1,8 +1,4 @@
-<ul>
-  <li>{{#link-to 'photos'}}PHOTOS{{/link-to}}</li>
-  <li>{{#link-to 'search'}}search{{/link-to}}</li>
-  <li>{{#link-to 'upload'}}upload{{/link-to}}</li>
-</ul>
+{{tab-bar select="selectTab" tabs=tabs}}
 
 <ul>
   {{#each photos as |photo|}}
