@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
   actions: {
     selectImage(photo) {
       this.set('photo', photo);
-      this.transitionToRoute('photo.properties', { photo_id: photo.id });
+      this.transitionToRoute('photo.properties', photo.id);
     }
   }
 });
