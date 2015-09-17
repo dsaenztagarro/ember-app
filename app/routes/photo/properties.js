@@ -5,7 +5,6 @@ export default Ember.Route.extend({
 
   model: function() {
     return {
-      photos: this.get('photosService').fetchAll(), /* the list of photos */
       photo: this.get('cacheService').get('photo') /* current photo selected on list */
     };
   }

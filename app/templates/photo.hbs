@@ -5,7 +5,7 @@
 </ul>
 
 <ul>
-  {{#each model.photos as |photo|}}
+  {{#each photos as |photo|}}
     <li><a {{action 'select' photo}}>{{photo.url}}</a></li>
   {{/each}}
 </ul>
