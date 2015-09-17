@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   photos: Ember.computed.reads('photosController.model.photos'),
   photo: Ember.computed.reads('photosController.model.photo'),
   actions: {
-    select(photo) {
+    selectImage(photo) {
       this.set('photo', photo);
       this.transitionToRoute('photo.properties', { photo_id: photo.id });
     }
