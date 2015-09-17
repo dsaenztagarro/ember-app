@@ -5,14 +5,9 @@
 </ul>
 
 <ul>
-  {{#each model as |photo|}}
+  {{#each model.photos as |photo|}}
     <li><a {{action 'select' photo}}>{{photo.url}}</a></li>
   {{/each}}
 </ul>
 
-<ul>
-  <li>{{#link-to 'photos.properties'}}properties{{/link-to}}</li>
-  <li>{{#link-to 'photos.crops'}}crops{{/link-to}}</li>
-</ul>
-
-{{outlet}}
+Empty select a photo

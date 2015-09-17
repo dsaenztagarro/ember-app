@@ -7,8 +7,6 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
     this.route('photos', function() {
-        this.route('properties');
-        this.route('crops');
     });
 		this.route('photo', { path: '/photo/:photo_id' }, function() {
         this.route('properties');

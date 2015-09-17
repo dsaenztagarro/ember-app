@@ -1,0 +1,18 @@
+<ul>
+  <li>{{#link-to 'photos'}}PHOTOS{{/link-to}}</li>
+  <li>{{#link-to 'search'}}search{{/link-to}}</li>
+  <li>{{#link-to 'upload'}}upload{{/link-to}}</li>
+</ul>
+
+<ul>
+  {{#each model.photos as |photo|}}
+    <li><a {{action 'select' photo}}>{{photo.url}}</a></li>
+  {{/each}}
+</ul>
+
+<ul>
+  <li>{{#link-to 'photo.properties'}}properties{{/link-to}}</li>
+  <li>{{#link-to 'photo.crops'}}crops{{/link-to}}</li>
+</ul>
+
+{{outlet}}
