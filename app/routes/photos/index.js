@@ -10,6 +10,17 @@ export default Ember.Route.extend({
     };
   },
 
+  afterModel(model) {
+    var photos = model.photos;
+    // Select first photo by default
+    if (photos.length > 0) {
+      var photo = photos[0];
+      this.get('cacheService').add('photo', photo);
+      this.transitionTo('photo', photo.id);
+    }
+  },
+
+
   setupController(controller, model) {
     controller.set('model', model);
     controller.set('photos', model.photos);

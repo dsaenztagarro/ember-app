@@ -5,6 +5,7 @@ export default Ember.Route.extend({
 
   model: function() {
     return {
+      tabs: this.get('menuService').getTabs('default'),
       photos: this.get('photosService').fetchAll(), /* the list of photos */
       photo: null /* current photo selected on list */
     };
@@ -14,5 +15,6 @@ export default Ember.Route.extend({
     controller.set('model', model);
     controller.set('photos', model.photos);
     controller.set('photo', model.photo);
+    controller.set('tabs', model.tabs);
   }
 });
