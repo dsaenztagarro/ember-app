@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
+//TODO: Should be an ObjectController
 export default Ember.Controller.extend({
   photoController: Ember.inject.controller('photo'),
   photo: Ember.computed.reads('photoController.photo'),
