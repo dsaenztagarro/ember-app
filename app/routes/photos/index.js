@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import TabBarMixin from 'webapp/mixins/tab-bar';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(TabBarMixin, {
   photosService: Ember.inject.service('photos'),
   model() {
     return {
@@ -20,11 +21,9 @@ export default Ember.Route.extend({
     }
   },
 
-
   setupController(controller, model) {
-    controller.set('model', model);
+    this._super(controller, model);
     controller.set('photos', model.photos);
     controller.set('photo', model.photo);
-    controller.set('tabs', model.tabs);
   }
 });

@@ -1,5 +1,5 @@
 <ul>
   {{#each tabs as |tab| }}
-    <li><a {{action "select" tab}} {{bind-attr href=url}}>{{tab.text}}</a></li>
+    <li><span {{action "select" tab}}>{{tab.text}}</span></li>
   {{/each}}
 </ul>
