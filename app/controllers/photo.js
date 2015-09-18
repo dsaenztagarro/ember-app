@@ -7,7 +7,8 @@ export default Ember.Controller.extend(TabBarMixin, {
   photo: Ember.computed.reads('model.photo'),
   actions: {
     selectImage(photo) {
-      this.set('photo', photo);
+      this.get('cacheService').add('photo', photo);
+      this.transitionToRoute('photo.properties', photo.id);
     }
   }
 });
