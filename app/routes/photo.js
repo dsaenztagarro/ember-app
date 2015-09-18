@@ -12,7 +12,12 @@ export default Ember.Route.extend({
   },
 
   afterModel: function(model) {
-    this.transitionTo('photo.properties', model.photo.id);
+    var photo = model.photo;
+    if (photo) {
+      this.transitionTo('photo.properties', model.photo.id);
+    } else {
+      this.transitionTo('photos');
+    }
   },
 
   setupController(controller, model) {
