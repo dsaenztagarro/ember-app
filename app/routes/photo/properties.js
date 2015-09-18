@@ -7,5 +7,12 @@ export default Ember.Route.extend({
     return {
       photo: this.get('cacheService').get('photo') /* current photo selected on list */
     };
+  },
+
+  actions: {
+    selectImage(photo) {
+      this.get('cacheService').add('photo', photo);
+      this.transitionTo('photo.properties', photo.id);
+    }
   }
 });
