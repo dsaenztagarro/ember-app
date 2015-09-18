@@ -7,8 +7,12 @@ export default Ember.Route.extend({
     return {
       tabs: this.get('menuService').getTabs('default'),
       photos: this.get('photosService').fetchAll(), /* the list of photos */
-      photo: null /* current photo selected on list */
+      photo: this.get('cacheService').get('photo') /* current photo selected on list */
     };
+  },
+
+  afterModel: function(model) {
+    this.transitionTo('photo.properties', model.photo.id);
   },
 
   setupController(controller, model) {
