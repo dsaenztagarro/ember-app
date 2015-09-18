@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import TabBarMixin from 'webapp/mixins/tab-bar';
 
-export default Ember.Controller.extend({
+export default Ember.Controller.extend(TabBarMixin, {
   photos: function() {
     return this.get('model').photos;
   }.property('model'),
