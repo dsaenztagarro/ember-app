@@ -6,6 +6,9 @@ export default Ember.Controller.extend({
   }.property('model'),
 
   actions: {
+    selectTab(tab) {
+      this.transitionToRoute(tab.routeName);
+    },
     selectImage(photo) {
       this.get('cacheService').add('photo', photo);
       this.transitionToRoute('photo.properties', photo.id);

@@ -3,11 +3,19 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   photosService: Ember.inject.service('photos'),
 
-  model: function() {
-    return {
+  model() {
+    return Ember.Object.create({
       photos: this.get('photosService').fetchAll(), /* the list of photos */
-      photo: null /* current photo selected on list */
-    };
+      photo: this.get('cacheService').get('photo') /* current photo selected on list */
+    });
+  },
+
+  afterModel(model) {
+    if (model) {
+      this.transitionTo('photo.properties', model.id);
+    } else {
+      this.transitionTo('photos');
+    }
   },
 
   setupController(controller, model) {
