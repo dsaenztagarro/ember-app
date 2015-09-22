@@ -1,19 +1,13 @@
 import Ember from 'ember';
 import config from './config/environment';
+import imageServiceRouter from 'ember-image-service/router';
 
 var Router = Ember.Router.extend({
   location: config.locationType
 });
 
 Router.map(function() {
-    this.route('photos', function() {
-    });
-		this.route('photo', { path: '/photo/:photo_id' }, function() {
-        this.route('properties');
-        this.route('crops');
-		});
-    this.route('search');
-    this.route('upload');
+  imageServiceRouter(this);
 });
 
 export default Router;
