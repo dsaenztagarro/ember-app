@@ -1,6 +1,6 @@
 {
   "name": "webapp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Small description for webapp goes here",
   "private": true,
   "directories": {
@@ -14,12 +14,12 @@
   },
   "repository": "",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.12.7"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ember-image-service": "0.0.1"
+    "ember-image-service": "file:../ember-image-service"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
