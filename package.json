@@ -21,7 +21,8 @@
   "dependencies": {
     "ember-image-service": "0.0.1",
     "ember-components": "0.0.1",
-    "ember-services": "0.0.1"
+    "ember-services": "0.0.1",
+    "ember-core": "0.0.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
