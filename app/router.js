@@ -7,7 +7,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  imageServiceRouter(this);
+  this.route('communication');
+  this.route('content', function() {
+    imageServiceRouter(this);
+  });
 });
 
 export default Router;
