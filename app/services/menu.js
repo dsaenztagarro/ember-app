@@ -4,10 +4,10 @@ var config = {
   'application': [
     {
       name: 'communication',
-      routeName: 'application.communication'
+      routeName: 'communication'
     }, {
       name: 'content',
-      routeName: 'application.content'
+      routeName: 'content'
     }
   ]
 };
