@@ -21,7 +21,7 @@ From master project:
 },
 ```
 
-- Add entry to `app/router.js`
+- Add entry to `app/router.js` (example for ember-image-service)
 
 ```
 // ...
