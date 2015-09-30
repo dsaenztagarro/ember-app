@@ -1,0 +1,6 @@
+<h4>Menu tools</h4>
+<ul>
+  {{#each tools as |tool|}}
+    <li><span {{action "select" tool}}>{{tool.name}}</span></li>
+  {{/each}}
+</ul>
