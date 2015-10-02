@@ -12,7 +12,10 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type" : "git",
+    "url": "git@github.com:dsaenztagarro/ember-app.git"
+  },
   "engines": {
     "node": ">= 0.12.7"
   },
@@ -20,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "ember-image-service": "0.0.1",
+    "ember-poll-service": "0.0.1",
     "ember-components": "0.0.1",
     "ember-services": "0.0.1",
     "ember-core": "0.0.1"
