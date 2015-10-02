@@ -5,6 +5,9 @@ export default Ember.Service.extend({
     return [{
         name: 'image-service',
         routeName: 'content.image-service'
+      }, {
+        name: 'poll-service',
+        routeName: 'content.poll-service'
       }
     ];
   }
